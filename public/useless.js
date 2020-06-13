@@ -1,5 +1,5 @@
-let takeMeToNeverland = () => {
 var sitesList = [
+  "https://sanketh-7d8e4.web.app/stickman.html",
   "http://www.republiquedesmangues.fr/",
   "http://www.movenowthinklater.com/",
   "http://www.partridgegetslucky.com/",
@@ -71,20 +71,22 @@ var sitesList = [
   "https://greatbignothing.com/",
 ];
 
-let visitedSitesInStore = localStorage.getItem('visitedSites')
+let takeMeToNeverland = () => {
 
-if (visitedSitesInStore) {
-  let visitedSites = visitedSitesInStore.split(",");
-  for(site of visitedSites){
-    sitesList.splice(site, 1)
+  let visitedSitesInStore = localStorage.getItem('visitedSites')
+
+  if (visitedSitesInStore) {
+    let visitedSites = visitedSitesInStore.split(",");
+    for (site of visitedSites) {
+      sitesList.splice(site, 1)
+    }
   }
-}
 
-let urlIndex = getRandomInt(sitesList.length)
-let temp = visitedSitesInStore  + "," + urlIndex.toString()
+  let urlIndex = getRandomInt(sitesList.length)
+  let temp = visitedSitesInStore + "," + urlIndex.toString()
 
-localStorage.setItem('visitedSites', temp);
-window.open(sitesList[urlIndex])
+  localStorage.setItem('visitedSites', temp);
+  window.open(sitesList[urlIndex])
 }
 
 function getRandomInt(max) {
@@ -92,3 +94,13 @@ function getRandomInt(max) {
 }
 
 document.getElementById("takeMeToNeverland").addEventListener('click', takeMeToNeverland)
+
+
+for (site of sitesList) {
+  li = document.createElement("li")
+  let node = document.createElement("a"); 
+  node.href= site;
+  node.innerHTML = site
+  li.appendChild(node)
+  document.getElementById("list").appendChild(li);
+}
