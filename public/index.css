@@ -49,3 +49,14 @@ body {
 * {
   box-sizing: border-box;
 }
+
+#topbar {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+a {
+   color: white;
+   font-size: large;
+}
