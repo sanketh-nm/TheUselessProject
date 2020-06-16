@@ -4,59 +4,59 @@
   padding: 0;
 }
 
-h1 {
-  font-weight: normal;
-}
-
-li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
-}
-
-li span {
-  display: block;
-  font-size: 4.5rem;
-}
-
-
-/* general styling */
-html, body {
+html, body{
+  background-color: black;
   height: 100%;
-  margin: 0;
-}
-
-body {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: rgb(41,42,45);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
   display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: Arial -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .container {
-  color: white;
-  margin: 0 auto;
-  padding: 0.5rem;
+  position: relative;
+  font-size: 5vw;
+}
+
+#bang:hover{
+  display: inline-block;
+  transform-origin: center 70%;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100%{
+    transform: rotate(1turn);
+  }
+}
+
+.topbar{
+  position: relative;
+  top: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
+  padding-bottom: 2em;
+  border-bottom: 0.1px solid white;
 }
 
-* {
-  box-sizing: border-box;
+#linkedin, a{
+  color: white;
+  font-size: 1.5vw;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-#topbar {
-  position: absolute;
-  top: 1em;
-  right: 1em;
+@media screen and (max-width: 768px) {
+  .container {
+    font-size: 10vw;
+  }
+  #linkedin, a{
+    font-size: 4vw;
 }
-
-a {
-   color: white;
-   font-size: large;
 }
