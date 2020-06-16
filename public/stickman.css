@@ -67,6 +67,7 @@ body {
   animation: moveLeftLeg 1s alternate infinite linear;
   animation-delay: 1s;
   transform-origin: top;
+  z-index: 10;
 }
 
 @keyframes moveLeftLeg {
@@ -89,6 +90,7 @@ body {
   left: 157px;
   animation: moveRightLeg 1s alternate infinite linear;
   transform-origin: top;
+  z-index: 10;
 }
 
 @keyframes moveRightLeg {
