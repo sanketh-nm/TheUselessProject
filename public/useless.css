@@ -53,3 +53,11 @@ html, body{
   text-decoration: none;
   cursor: pointer;
 }
+
+.bottom {
+  position: relative;
+  bottom: 1em;
+  font-size: small;
+  color: grey;
+}
+

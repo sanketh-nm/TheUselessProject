@@ -1,5 +1,5 @@
 var sitesList = [
-  "https://sanketh-7d8e4.web.app/stickman.html",
+  "https://sanketh.dev/stickman.html",
   "http://www.republiquedesmangues.fr/",
   "http://www.movenowthinklater.com/",
   "http://www.partridgegetslucky.com/",
