@@ -19,11 +19,14 @@ li {
 li span {
   display: block;
   font-size: 4.5rem;
+  font-variant-numeric: tabular-nums;
+  font-family: monospace;
 }
 
 
 /* general styling */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -32,15 +35,16 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgb(41,42,45);
+  background-color: #126060;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: 'Handlee', cursive;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .container {
-  color: white;
   margin: 0 auto;
   padding: 0.5rem;
   text-align: center;
@@ -57,6 +61,25 @@ body {
 }
 
 a {
-   color: white;
-   font-size: large;
+  color: white;
+  mix-blend-mode: difference;
+  font-size: large;
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 2em;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2rem;
+  font-size: small;
+}
+
+.footer a {
+  font-size: small;
+}
+
+#colorDiv{
+  font-family: monospace;
 }

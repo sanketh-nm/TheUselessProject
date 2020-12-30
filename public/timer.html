@@ -1,24 +1,30 @@
-<head>
+<html><head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> the long walk to the freedom </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <title> The color time</title>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&amp;family=Handlee&amp;family=Ranchers&amp;display=swap" rel="stylesheet">
+  <script src="js/ntc.js"></script>
   <link href="./timer.css" rel="stylesheet">
   
-</head>
+<script src="https://www.googletagmanager.com/gtag/js?l=dataLayer" async=""></script></head>
 
-<body>
+<body style="background-color: rgb(33, 7, 22);">
   <div id="topbar">
     <a href="./stickman.html">Watch this guy walk</a> <br><br>
-    <a href="./uselesspage.html">The useless button</a>
+    <a href="./uselesspage.html">The useless button</a><br><br>
+    <a href="#">Home</a>
   </div>
   <div class="container">
-    <h1>Countdown to freedom:</h1>
+    <h1>The time is</h1>
     <ul>
-      <li ><span id="days"></span>days</li>
-      <li><span id="hours"></span>Hours</li>
-      <li><span id="minutes"></span>Minutes</li>
-      <li><span id="seconds"></span>Seconds</li>
+      <li><span id="currentTime">#210716</span></li>
     </ul>
+    <h4 id="colorDiv"> That's <span id="colorName">Aubergine</span> O'clock</h4>
+  </div>
+  <div class="footer">
+    <div>The color of the background changes on the value of time in the format HH:mm:ss</div>
+    <div>Color names are provided by <a href="http://chir.ag/projects/ntc/">ntc.js</a>. </div>
+    <div>Date library used:  <a href="https://moment.github.io/luxon/">Luxon</a>. </div>
   </div>
   <script src="timer.js" type="text/javascript"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -34,4 +40,4 @@
     firebase.analytics();
     firebase.analytics().logEvent('counter_page_load');
   </script>
-</body>
+</body></html>

@@ -1,26 +1,23 @@
 window.addEventListener('load', function () {
 
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-  
-  let countDown = new Date('Nov 1, 2020 00:00:00').getTime(),
-      x = setInterval(function() {    
-  
-        let now = new Date().getTime(),
-            distance = countDown - now;
-  
-        document.getElementById('days').innerText = Math.floor(distance / (day)),
-          document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-  
-        //do something later when date is reached
-        //if (distance < 0) {
-        //  clearInterval(x);
-        //  'IT'S MY BIRTHDAY!;
-        //}
-  
-      }, second)
-    })
+  const second = 1000;
+  let clock = setInterval(function () {
+
+    let now = luxon.DateTime.local();
+    let nowHex= `#${now.toFormat("HHmmss")}`;
+
+    document.body.style.backgroundColor = nowHex;
+    document.getElementById('currentTime').innerText = nowHex;
+
+    var n_match = ntc.name(nowHex);
+    n_rgb = n_match[0]; // RGB value of closest match
+    n_name = n_match[1]; // Text string: Color name
+    n_exactmatch = n_match[2]; // True if exact color match
+
+    console.log(n_exactmatch);
+   document.getElementById("colorName").innerText = n_name
+    
+
+
+  }, second)
+})
