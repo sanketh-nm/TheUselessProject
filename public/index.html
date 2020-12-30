@@ -1,3 +1,5 @@
+<!-- Not my best code. If you get lost in the spaggeti and can't get out, try eating it. -->
+
 <!DOCTYPE html>
 <html>
 
@@ -8,22 +10,64 @@
 </head>
 
 <body>
-  <div class="topbar">
-    <a href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a>
-    <a href="./stickman.html">Watch this guy walk</a>
-    <a href="./uselesspage.html">The useless button</a>
+  <div class="main-container">
+    <div class="topbar">
+      <a href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a>
+      <a href="https://github.com/sanketh-nm">GitHub</a>
+    </div>
+    <div class="container borderLeftRight">
+      <h1>Hello<span id="bang">!</span></h1>
+      <h2>I am</h2>
+      <h2>Sanketh.</h2>
+    </div>
+    <div class="bottom" >    </div>
   </div>
-  <div class="container borderLeftRight">
-    <h1>Hello<span id="bang">!</span></h1>
-    <h2>I am</h2>
-    <h2>Sanketh.</h2>
-  </div>
-  <div class="bottom">
-    I track you with a little help from Google.<br>
-    <small>Please don't sue me. I got no money.</small> 
+  <div class="project-container">
+    <div class="project-header">
+      <h2> PROJECTS </h2>
+      <small>Things I do when I'm bored. I generally spend all my day doing useful things for work. What I build in spare time are not always useful. </small>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='https://cloud-notepad.herokuapp.com/'" class="borderLeftRight"> Shared notepad</h3>
+      <div class="desc">
+        <p> The tool I needed before I bought an iPhone. Sharing clipboard between the phone the PC is very useful to me.
+        This toll generates a unique URL for every note saved and create QR code to that URL so it can be read from phone. Everytime you refresh save the note, simply refresh the page on the phone to acess the updated note.</p>
+        <small>Might not work now. I used mLab which moved to MongoDB Atlas :( </small></p>
+      </div>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='./calendar'" class="borderLeftRight"> The meeting analyzer for Gcal.</h3>
+      <br><small>Work in Progress.</small>
+      <div class="desc">
+      <p> 2020 has been great in converting the world to a work from home culture and in-turn reducing our carbon footprint on the <span class = "clickable" onclick = "location.href= 'https://solarsystem.nasa.gov/planets/earth/overview/'">Earth</span> a little.
+      </p>
+      <p>You know what else it has done? Increased the number of meetings, a lot. </p>
+      <p> The point of this tool is to help analyze how much time I spent on the meetings in a given number of days. </p>
+    </div>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='timer.html'" class="borderLeftRight"> The Color Clock</h3>
+      <div class="desc">
+      <p> The numbers have taken over our lives from a long time. What if threw that away and used colors instead?
+      The Color Clock aims at exactly that, by displaying time in hex colors. Doesn't it feel great to say Aubergine O'clock instead of 9 O'clock?
+      <br><small> (Not really, I know)</small></p>
+    </div>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='stickman.html'" class="borderLeftRight">The Walking Stickman</h3>
+      <div class="desc">
+        <p> Adding to the fleet of random websites, I present you, the stickman. Nothing but a stickman that kinda looks like he's walking. 
+        </p>
+        <p> A pure CSS animation expriment.</p>
+        <p class = "clickable" onclick="location.href='uselesspage.html'" >Click here for a collection of similar, random, sometimes fun websites. 
+          <p></p> For example,  <span class="clickable" onclick="location.href='https://cat-bounce.com/'" > https://cat-bounce.com/ </span>  </p>
+      </div>
+    </div>
+    <div class="bottom" >
+<small>If you're looking to see my useful work, head over to my <a id="bottom-linkedin" class="clickable" href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a>.</small>
+    </div>
   </div>
 
-  </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="/__/firebase/7.15.0/firebase-app.js"></script>
 
