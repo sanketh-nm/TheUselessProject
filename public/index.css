@@ -32,11 +32,6 @@ html, body{
   animation: rotate 2s linear infinite;
 }
 
-@keyframes rotate {
-  100%{
-    transform: rotate(1turn);
-  }
-}
 
 .topbar{
   position: relative;
@@ -76,14 +71,6 @@ html, body{
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    font-size: 10vw;
-  }
-  a{
-    font-size: 4vw;
-}
-}
 
 .borderLeftRight {
   display: inline-block;
@@ -112,19 +99,6 @@ small{
   color: #403b3b;
 }
 
-
-@media (prefers-color-scheme: white) {
-  html, body{
-    background-color: white;
-    color: black;
-  }
-
-  .borderLeftRight::after{
-    background-color: hsl(243, 80%, 62%);;
-  }
-}
-
-
 .project-container{
   min-height: 100%;
   min-width: 98%;
@@ -135,6 +109,15 @@ small{
   color: white;
   line-height: 1.5;
   margin: 10px;
+}
+
+.project-container::after {
+  content: "";
+  background: repeating-linear-gradient(90deg,white, white 20px, black 20px, black 40px);
+  position: relative;
+  width: 50%;
+  bottom: -12px;
+  height: 2px;
 }
 
 .project-header{
@@ -157,37 +140,258 @@ small{
 
 .clickable{
   cursor: pointer;
-  color: #58a6ff
-}
-
-@media screen and (min-width: 768px) {
-  .project{
-    width: 60vw;
-  }
-  .topbar{
-    position: -webkit-sticky;
-    position: sticky;
-    background-color: black;
-    z-index: 100;
-  }
+  color: rgb(97,215,198);
+  text-decoration: none;
+  font-size: 1em;
 }
 
 .desc{
   margin-top: 1em;
 }
 
-/* ANIMATIONS */
+.logo{
+  height: 1em;
+  width: auto;
+  bottom: -3px;
+  position: relative;
+}
 
-@keyframes slidein {
-  from {
-    opacity: 1;
+.responsibilities{
+  color: rgb(97,215,198);
+}
+
+ul{
+  margin-left: 1em;
+}
+
+.subheader{
+  color: #403b3b;
+}
+
+/*BREAKPOINTS*/
+
+@media (prefers-color-scheme: white) {
+  html, body{
+    background-color: white;
+    color: black;
   }
 
-  to {
-    opacity: 0.5;
+  .borderLeftRight::after{
+    background-color: hsl(243, 80%, 62%);;
   }
 }
 
-.animate-fade {
-    animation: slidein 2s infinite alternate;
+@media screen and (min-width: 768px) {
+  .project{
+    width: 60vw;
+  }
+  /* .topbar{
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: black;
+    z-index: 100;
+  } */
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    font-size: 10vw;
+  }
+  a{
+    font-size: 4vw;
+}
+}
+
+
+
+/* ANIMATIONS */
+
+.switch-div{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  top: 100%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 3px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes rotate {
+  100%{
+    transform: rotate(1turn);
+  }
+}
+
+.cube{
+  height: 50px;
+width: 50px;
+/* border: 2px solid white; */
+position: absolute;
+opacity: 0;
+background: url('maple.webp') center;
+background-size: cover;
+}
+
+.cube0{
+  left: 10%;
+  top: 20%;
+  animation: 8s cube linear infinite;
+}
+
+.cube1{
+  left: 80%;
+  top: 30%;
+  animation: 8s cube linear infinite;
+  animation-delay: 1s;
+}
+
+.cube2{
+  left: 70%;
+  top: 80%;
+  animation: 8s cube linear infinite;
+  animation-delay: 1s;
+}
+.cube3{
+  left: 20%;
+  top: 75%;
+  animation: 8s cube linear infinite;
+  animation-delay: 3s;
+}
+.cube4{
+  left: 60%;
+  top: 60%;
+  animation: 8s cube linear infinite;
+  animation-delay: 4s;
+}
+.cube5{
+  left: 65%;
+  top: 65%;
+  animation: 8s cube linear infinite;
+  animation-delay: 5s;
+}
+.cube6{
+  left: 32%;
+  top: 24%;
+  animation: 8s cube linear infinite;
+  animation-delay: 7s;
+}
+.cube7{
+  left: 40%;
+  top: 77%;
+  animation: 8s cube ease-out infinite;
+  animation-delay: 6s;
+}
+
+/* @keyframes cube {
+  0%{
+    transform: rotate(0deg);
+      opacity:0
+  }
+  10%{
+    transform: rotate(0deg);
+      opacity:0
+  }
+  80%{
+    transform: rotate(360deg) scale(3);
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(360deg) scale(3);
+    opacity: 0;
+  }
+
+} */
+
+@keyframes cube {
+  0%{
+    transform: translate(0) rotate(0deg);
+      opacity:0
+  }
+  50%{
+    transform: translate(-50px, 50vh) rotate(-300deg);
+    opacity: 1;
+  }
+  90%{
+    transform: translate(25px,90vh) rotate(45deg);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(30px,100vh) rotate(50deg);
+    opacity: 0;
+  }
+
+}
+
+/* SWITCH */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.blank{
+  opacity: 0;
+  display: none;
 }

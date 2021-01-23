@@ -1,7 +1,7 @@
 <!-- Not my best code. If you get lost in the spaggeti and can't get out, try eating it. -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hi, I'm Sanketh Kumar N M and this is my personal website.">
@@ -14,7 +14,24 @@
     <div class="topbar">
       <a href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a>
       <a href="https://github.com/sanketh-nm">GitHub</a>
+      <div class="switch-div">
+        <span>Animation &nbsp;</span>
+        <p></p>
+        <label class="switch">
+          <input type="checkbox"  checked onclick="showAnimation(this)">
+          <span class="slider round"> </span>
+        </label>
+      </div>
     </div>
+  
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+    <div class="cube cube4"></div>
+    <div class="cube cube5"></div>
+    <div class="cube cube6"></div>
+    <div class="cube cube7"></div>
+    <div class="cube cube0"></div>
     <div class="container borderLeftRight">
       <h1>Hello<span id="bang">!</span></h1>
       <h2>I am</h2>
@@ -25,7 +42,7 @@
   <div class="project-container">
     <div class="project-header">
       <h2> PROJECTS </h2>
-      <small>Things I do when I'm bored. I generally spend all my day doing useful things for work. What I build in spare time are not always useful. </small>
+      <small>Things I do when I'm bored.</small>
     </div>
     <div class="project">
       <h3 onclick="location.href='https://cloud-notepad.herokuapp.com/'" class="borderLeftRight"> Shared notepad</h3>
@@ -54,7 +71,7 @@
     </div>
     </div>
     <div class="project">
-      <h3 onclick="location.href='stickman.html'" class="borderLeftRight">The Walking Stickman</h3>
+      <h3 onclick="location.href='stickman.html'" class="borderLeftRight">The Walking Stickman <img src="stickman.webp" class="logo"> </h3> 
       <div class="desc">
         <p> Adding to the fleet of random websites, I present you, the stickman. Nothing but a stickman that kinda looks like he's walking. 
         </p>
@@ -63,9 +80,56 @@
           <p></p> For example,  <span class="clickable" onclick="location.href='https://cat-bounce.com/'" > https://cat-bounce.com/ </span>  </p>
       </div>
     </div>
-    <div class="bottom" >
-<small>If you're looking to see my useful work, head over to my <a id="bottom-linkedin" class="clickable" href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a>.</small>
+  </div>
+  <div class="project-container">
+    <div class="project-header">
+      <h2> WORK </h2>
+      <small>Things I do for a living.</small>
     </div>
+    <div class="project">
+      <h3 onclick="location.href='https://orderful.com/'" class="borderLeftRight"><img class="logo" src ='orderful-logo.webp'> Orderful Inc. - Integration Engineer.</h3> 
+      <p class="subheader">October 2019 -PRESENT,  VANCOUVER, BC, CA.</p>
+      <div class="desc">
+        <h3 class="responsibilities"> Primary responsibilities</h3>
+        <div>
+        <ul>
+          <li>Designing and implementing integrations to the customers SORs to the Orderful API using TypeScript.</li>
+          <li>Handling Orderful onboarding experience for new projects.</li>
+          <li>Working with customers and integration providers to provide direction on how best to integrate with Orderful.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='https://orderful.com/'" class="borderLeftRight"><img class="logo" src ='orderful-logo-old.webp'> Orderful Labs - Integration Engineer.</h3> 
+      <p class="subheader">September 2017 - October 2019,  BANGALORE, IN.</p>
+      <div class="desc">
+        <h3 class="responsibilities"> Primary responsibilities</h3>
+        <div>
+        <ul>
+          <li>Designing and implementing integrations to the customers SORs to the Orderful API using TypeScript.</li>
+          <li>Designing and developing internal use tools.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div class="project">
+      <h3 onclick="location.href='https://doppiogroup.com/'" class="borderLeftRight"><img class="logo" src ='dopelogo.webp'> DoppioGroup - Integration Engineer.</h3> 
+      <p class="subheader">July 2016  - September 2017,  BANGALORE, IN. </p>
+      <div class="desc">
+        <h3 class="responsibilities"> Primary responsibilities</h3>
+        <div>
+        <ul>
+          <li>Using Java, developing and delivering integration between Infor systems and various EDI platforms.</li>
+          <li>Maintain and support the existing integrations</li>
+          <li>Analyze and provide the most efficient software solutions.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div class="bottom" >
+      <small>Connect with me on <a id="bottom-linkedin" class="clickable" href="https://www.linkedin.com/in/sankethkumarnm/">LinkedIn</a> or <a href="Resume Sanketh Kumar.pdf" class="clickable" download="Resume - Sanketh Kumar.pdf">download</a> my resume.</small>
+          </div>
   </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -83,4 +147,24 @@
   </script>
 </body>
 
+<script>
+  let showAnimation = (checkBox) =>{
+
+    if(checkBox.checked){
+    for(let i =0; i< 8; i++){
+    document.getElementsByClassName("blank")[0].classList.add('cube')
+      className = 'cube' + i
+      document.getElementsByClassName("blank")[0].classList.add(className)
+      document.getElementsByClassName("blank")[0].classList.remove('blank')
+    }
+  }else{
+    for(let i =0; i< 8; i++){
+    document.getElementsByClassName("cube")[0].classList.add('blank')
+      className = 'cube' + i
+      document.getElementsByClassName("cube")[0].classList.remove(className)
+      document.getElementsByClassName("cube")[0].classList.remove('cube')
+    }
+  }
+}
+</script>
 </html>
